@@ -68,3 +68,26 @@
       .aside{order:2}
       header{flex-direction:row}
     }
+    .container {
+    width: 90%;   /* nem fix 1200px */
+    max-width: 1200px;
+    margin: auto;
+    }
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+/* Mobil (max 600px széles) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  header {
+    text-align: center;
+  }
+  .content {
+    padding: 10px;
+  }
+}
+
