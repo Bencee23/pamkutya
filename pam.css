@@ -1,0 +1,70 @@
+:root{
+      --paper:#f3e7cf; /* pergamen alap */
+      --ink:#2b1b0f;   /* tintaszín */
+      --gold:#c99b3b;  /* díszítések */
+      --accent:#6b3f2b; 
+      --frame:rgba(0,0,0,0.06);
+      --maxw:1000px;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0; padding:2.5rem 1rem; background:linear-gradient(180deg, #f7f1e0 0%, var(--paper) 50%);
+      color:var(--ink); font-family:"Georgia", "Times New Roman", Times, serif; -webkit-font-smoothing:antialiased;
+      display:flex; justify-content:center;
+    }
+    .book{
+      width:100%; max-width:var(--maxw); background:var(--paper); box-shadow:0 10px 30px rgba(0,0,0,0.15);
+      border:12px solid rgba(0,0,0,0.05); padding:2rem; position:relative;
+    }
+    /* képes krónika-fejléc */
+    header{
+      display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem;
+    }
+    .illust{
+      width:96px; height:96px; border-radius:12px; background:linear-gradient(135deg,var(--gold),#f4e0a8);
+      display:flex; align-items:center; justify-content:center; box-shadow:inset 0 -6px 14px rgba(0,0,0,0.06);
+      border:4px solid rgba(107,63,43,0.12);
+      background-image: url(OIP.webp);
+      background-position: center center;
+      background-size: 110%;
+    }
+    .title{
+      font-size:1.6rem; letter-spacing:0.6px; color:var(--accent);
+    }
+    .subtitle{font-size:0.92rem; color:#4a2f1f}
+
+    /* ornamentális vonal */
+    .ornament{height:8px; background:linear-gradient(90deg,var(--gold),transparent 40%); margin:1rem 0 1.2rem; border-radius:4px}
+
+    /* két hasáb - képes krónika hatás */
+    .content{display:grid; grid-template-columns:1fr 360px; gap:1.4rem; align-items:start}
+    .main{background:linear-gradient(180deg,transparent, transparent); padding:1rem; border-radius:8px}
+    .aside{
+        background:linear-gradient(180deg, rgba(255,255,255,0.25), transparent); padding:1rem; border-radius:8px; box-shadow:0 6px 18px var(--frame);
+       
+    }
+
+    /* dropcap */
+    .lead p:first-child::first-letter{float:left; font-size:3.6rem; line-height:1; padding-right:0.12rem; padding-left:0.04rem; font-weight:700; color:var(--gold); font-family:Georgia, serif}
+
+    .section{margin-bottom:1.1rem}
+    h2{font-size:1.08rem; margin:0 0 0.35rem 0; color:var(--accent); border-bottom:1px dashed rgba(0,0,0,0.06); padding-bottom:6px}
+    .caption{font-size:0.85rem; color:#5a3f25}
+
+    /* timeline stílus */
+    .timeline{display:flex; flex-direction:column; gap:0.6rem}
+    .event{background:linear-gradient(180deg, rgba(255,255,255,0.6), transparent); padding:0.7rem; border-left:6px solid var(--gold); border-radius:4px}
+    .event b{display:block; color:var(--accent)}
+    .event p{margin:0.25rem 0 0 0; font-size:0.95rem}
+
+    /* kis svg-illusztrációk */
+    .dog-svg{width:100%; max-width:280px; display:block; margin:0 auto 0.6rem}
+
+    footer{margin-top:1.6rem; text-align:right; font-size:0.85rem; color:#5c4230;}
+
+    /* responsive */
+    @media(max-width:880px){
+      .content{grid-template-columns:1fr;}
+      .aside{order:2}
+      header{flex-direction:row}
+    }
