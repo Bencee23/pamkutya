@@ -26,7 +26,7 @@
       border:4px solid rgba(107,63,43,0.12);
       background-image: url(OIP.webp);
       background-position: center center;
-      background-size: 180%;
+      background-size: 200%;
       background-repeat: no-repeat;
     }
     .title{
@@ -91,6 +91,7 @@ img {
     padding: 10px;
   }
 }
+
 
 
 
