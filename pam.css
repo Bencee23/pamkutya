@@ -11,10 +11,17 @@
       margin:0; padding:2.5rem 1rem; background:linear-gradient(180deg, #f7f1e0 0%, var(--paper) 50%);
       color:var(--ink); font-family:"Georgia", "Times New Roman", Times, serif; -webkit-font-smoothing:antialiased;
       display:flex; justify-content:center;
+      height: 250%;
+      background-image: url(/pergamen03.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 200%;
+      background-repeat: repeat-y;
     }
     .book{
       width:100%; max-width:var(--maxw); background:var(--paper); box-shadow:0 10px 30px rgba(0,0,0,0.15);
       border:12px solid rgba(0,0,0,0.05); padding:2rem; position:relative;
+      height: 100%;
     }
     /* képes krónika-fejléc */
     header{
@@ -28,6 +35,7 @@
       background-position: center center;
       background-size: 200%;
       background-repeat: no-repeat;
+      text-align: center;
     }
     .title{
       font-size:1.6rem; letter-spacing:0.6px; color:var(--accent);
@@ -91,7 +99,6 @@ img {
     padding: 10px;
   }
 }
-
-
-
-
+nav{
+  background-color: #f3e7cf;
+}
